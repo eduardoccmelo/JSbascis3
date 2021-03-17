@@ -3,6 +3,12 @@ let box = document.querySelector(".box");
 
 button.addEventListener("click", (event) => {
   box.classList.toggle("hidden");
-  event.target.textContent =
-    event.target.textContent == "Hide" ? "Show" : "Hide";
+  if (button.textContent === "Hide") {
+    button.textContent = "Show";
+  } else {
+    button.textContent = "Hide";
+  }
+  // COMPACT SOLUTION
+  // event.target.textContent =
+  //   event.target.textContent == "Hide" ? "Show" : "Hide";
 });
